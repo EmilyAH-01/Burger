@@ -7,6 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmilyAH-01/HW-13_Burger.git"
+  },
   "author": "Emily_Herman",
   "license": "ISC",
   "dependencies": {
