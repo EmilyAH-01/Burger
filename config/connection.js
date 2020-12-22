@@ -1,4 +1,4 @@
-// Initialize and export mySQL connection
+// Create and export mySQL connection
 
 var mysql = require("mysql");
 

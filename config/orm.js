@@ -1,7 +1,6 @@
-
 var connection = require("../config/connection.js");
 
-// Converts object key/value pairs to SQL syntax, taken from 01-Activities/17-CatsApp
+// Converts object key/value pairs to SQL syntax, ***taken from 01-Activities/17-CatsApp***
 function objToSql(ob) {
   var arr = [];
 
@@ -24,48 +23,37 @@ function objToSql(ob) {
   return arr.toString();
 }
 
-// Object for all our SQL statement functions.
+// Database functions
 var orm = {
-  all: function(tableInput, cb) {
-    var queryString = "SELECT * FROM ?? ;";
-    connection.query(queryString, tableInput, function(err, result) {
+  showAll: function(table, cb) {
+    var query = "SELECT * FROM ?? ;";
+
+    connection.query(query, table, function(err, result) {
       if (err) {
         throw err;
       }
       cb(result);
     });
   },
-  create: function(table, cols, vals, cb) {
-    var queryString = "INSERT INTO " + table + " (";
-    
-    queryString += cols.toString();
-    queryString += ") VALUES (?,?)";
 
-    console.log(queryString);
+  createNew: function(table, columns, inputs, cb) {
+    var query = "INSERT INTO " + table + " (" + columns.toString() + ") VALUES (?,?)";
 
-    connection.query(queryString, vals, function(err, result) {
+    connection.query(query, inputs, function(err, result) {
       if (err) {
         throw err;
       }
-
       cb(result);
     });
   },
-  // An example of objColVals would be {name: panther, sleepy: true}
-  update: function(table, objColVals, condition, cb) {
-    var queryString = "UPDATE " + table;
 
-    queryString += " SET ";
-    queryString += objToSql(objColVals);
-    queryString += " WHERE ";
-    queryString += condition;
+  updateCurrent: function(table, affectedObj, status, cb) {
+    var query = "UPDATE " + table + " SET " + objToSql(affectedObj) + " WHERE " + status;
 
-    console.log(queryString);
-    connection.query(queryString, function(err, result) {
+    connection.query(query, function(err, result) {
       if (err) {
         throw err;
       }
-
       cb(result);
     });
   }
