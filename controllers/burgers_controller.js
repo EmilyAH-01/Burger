@@ -10,7 +10,7 @@ var burger = require("../models/burger.js");
 router.get("/", function(req, res) {
   burger.showAll(function(data) {
     var handlebarsObject = {burgers: data};
-    res.render("index", handlebarsObject);
+    res.render("index.handlebars", handlebarsObject);
   });
 });
 
