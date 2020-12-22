@@ -2,19 +2,19 @@ var orm = require("../config/orm.js");
 
 // Execute database functions (written in orm.js)
 var burger = {
-  showAll: function(cb) {
-    orm.showAll("burgers", function(res) {
+  all: function(cb) {
+    orm.all("burgers", function(res) {
       cb(res);
     });
   },
 
-  createNew: function(columns, inputs, cb) {
-    orm.createNew("burgers", columns, inputs, function(res) {
+  create: function(columns, inputs, cb) {
+    orm.create("burgers", columns, inputs, function(res) {
       cb(res);
     });
   },
-  updateCurrent: function(affectedObj, status, cb) {
-    orm.updateCurrent("burgers", affectedObj, status, function(res) {
+  update: function(affectedObj, status, cb) {
+    orm.update("burgers", affectedObj, status, function(res) {
       cb(res);
     });
   }
