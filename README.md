@@ -1,4 +1,4 @@
-# HW-13_Burger
+# Burger
 
 Emily Herman 
 | MSU Coding Bootcamp Homework 13
