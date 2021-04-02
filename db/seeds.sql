@@ -1,5 +1,5 @@
-INSERT INTO burgers (burger_name)
-VALUES ("Turkey Bacon Avocado"), ("Jalapeno & Onion"), ("Animal Style"), ("Whopper");
+INSERT INTO cravings (food_name)
+VALUES ("turkey bacon avocado sandwich"), ("fetuccine alfredo"), ("mussels in wine sauce"), ("fresh grilled vegetables");
 
-INSERT INTO burgers (burger_name, devoured)
-VALUES ("Classic", true), ("Baconator", true), ("Big Mac", true);
+INSERT INTO cravings (food_name, devoured)
+VALUES ("pad thai", true), ("Trader Joe's mandarin orange chicken", true), ("yellowtail nigiri", true);

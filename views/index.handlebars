@@ -1,15 +1,15 @@
 <div class="row jumbotron text-center">
   <div class="col-md-12">
-    <span><i class="fas fa-hamburger fa-7x"></i></span>
-    <h1>Eat the Burger!</h1>
+    <span><i class="fas fa-hamburger fa-7x"></i><i class="fas fa-ice-cream fa-7x"></i><i class="fas fa-pizza-slice fa-7x"></i></span>
+    <h1>What foods are you craving?</h1>
   </div>
 </div>
 
-<div class="row burgers">
+<div class="row cravings">
   <div class="col-md-6 column">
-    <h2 class="text-center">Burgers available:</h2>
+    <h2 class="text-center">Foods to eat:</h2>
       <ul>
-        {{#each burgers}}
+        {{#each cravings}}
           {{#unless devoured}}
             {{> block/burger-block eaten=true}}
           {{/unless}}
@@ -17,9 +17,9 @@
       </ul>
   </div>
   <div class="col-md-6">
-    <h2 class="text-center">Burgers eaten:</h2>
+    <h2 class="text-center">Foods eaten:</h2>
       <ul>
-        {{#each burgers}}
+        {{#each cravings}}
           {{#if devoured}}
             {{> block/burger-block eaten=false}}
           {{/if}}
@@ -28,17 +28,17 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row add-group">
   <div class="col-md-12 text-center">
-    <h2>Add a Burger</h2>
+    <h2>Add a craving:</h2>
       <form class="create-form">
 
         <div class="form-group">
-          <label for="burg">Burger Name:</label>
+          <label for="burg">Name of Food:</label>
           <input type="text" id="burg" name="name">
         </div>
 
-        <button type="submit" class="btn btn-light">Add Burger</button>
+        <button type="submit" class="btn btn-light">Add Food</button>
       </form>
   </div>
 </div>

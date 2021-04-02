@@ -1,3 +1,5 @@
+// Cravings app Express server setup
+
 // Use Express
 var express = require("express");
 var PORT = process.env.PORT || 8080;
@@ -17,8 +19,8 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// Connect burgers_controller.js file
-var routes = require("./controllers/burgers_controller.js");
+// Connect cravings_controller.js file
+var routes = require("./controllers/cravings_controller.js");
 app.use(routes);
 
 // Start server

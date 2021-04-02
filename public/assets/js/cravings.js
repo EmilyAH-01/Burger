@@ -1,5 +1,5 @@
-// AJAX PUT and POST requests, triggered upon "Eat the Burger!" button click
-// *** Refactored from 01-Activities/17-CatsApp
+// AJAX PUT and POST requests, triggered upon "I've eaten it!" button click
+// *** Refactored from previous MSU Coding Bootcamp activity
 
 $(function() {
   $(".change-eat-status").on("click", function(event) {
@@ -24,7 +24,7 @@ $(function() {
     event.preventDefault();
 
     var newBurger = {
-      burger_name: $("#burg").val().trim(),
+      food_name: $("#burg").val().trim(),
       devoured: 0
     };
 

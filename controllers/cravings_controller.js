@@ -3,19 +3,19 @@ var express = require("express");
 var router = express.Router();
 
 // Connect next file: burger.js
-var burger = require("../models/burger.js");
+var craving = require("../models/burger.js");
 
 // Routes
 
 router.get("/", function(req, res) {
-  burger.all(function(data) {
-    var handlebarsObject = {burgers: data};
+  craving.all(function(data) {
+    var handlebarsObject = {cravings: data};
     res.render("index", handlebarsObject);
   });
 });
 
 router.post("/api/burgers", function(req, res) {
-  burger.create(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
+  craving.create(["food_name", "devoured"], [req.body.food_name, req.body.devoured], function(result) {
     res.json({ id: result.insertId });
   });
 });
@@ -23,7 +23,7 @@ router.post("/api/burgers", function(req, res) {
 router.put("/api/burgers/:id", function(req, res) {
   var status = "id = " + req.params.id;
 
-  burger.update({devoured: req.body.devoured }, status, function(result) {
+  craving.update({devoured: req.body.devoured }, status, function(result) {
     if (result.changedRows == 0) {
       return res.status(404).end();
     } else {

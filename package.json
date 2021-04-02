@@ -1,5 +1,5 @@
 {
-  "name": "hw-13-burger",
+  "name": "cravings",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EmilyAH-01/HW-13_Burger.git"
+    "url": "git+https://github.com/EmilyAH-01/cravings.git"
   },
   "author": "Emily_Herman",
   "license": "ISC",
