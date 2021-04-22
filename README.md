@@ -22,7 +22,7 @@ Navigate into your cloned project directory. In command line, enter:
 `npm start`
 
 ## Deployed Application
-https://emilyh-cravings.herokuapp.com/
+https://emilyah-cravings.herokuapp.com/
 
 ## Credit
 The starter code for this application was provided by MSU Coding Bootcamp. 
