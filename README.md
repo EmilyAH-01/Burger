@@ -1,7 +1,7 @@
 # cravings
 
 ## Summary 
-This full-stack application accepts user input, displays the input on the page, and stores the input in the MySQL database. Each food entered can then be "eaten" by pressing the button next to each food name. This sets the corresponding value of the "devoured" column in the database from false to true, then moves the burger name to the "Burgers eaten" side of the page.
+This full-stack application accepts user input, displays the input on the page, and stores the input in the MySQL database. Each food entered can then be "eaten" by pressing the button next to each food name. This sets the corresponding value of the "devoured" column in the database from false to true, then moves the food name to the "Foods eaten" side of the page.
 
 This app uses Express and Node to set up and communicate with a web server, Handlebars as an HTML generation engine, and a MySQL database.
 
